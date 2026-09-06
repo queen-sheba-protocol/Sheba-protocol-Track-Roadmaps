@@ -1,0 +1,134 @@
+name: Writeup
+description: Create a task for writing documentation, analysis, or educational content
+title: "[Writeup] Track Name - Topic"
+labels: ["type:writeup", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a task for writing a writeup, guide, analysis, or educational content.
+        This could be a vulnerability analysis, technique guide, CTF writeup, or research summary.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this writeup for?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+    validations:
+      required: true
+
+  - type: input
+    id: writeup_title
+    attributes:
+      label: Writeup Title
+      description: What is the title/topic of the writeup?
+      placeholder: "How to Exploit XSS Vulnerabilities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: writeup_purpose
+    attributes:
+      label: Purpose & Scope
+      description: What is the writeup about? What will it cover?
+      placeholder: |
+        ## Topic
+        
+        ## Purpose
+        
+        ## Audience
+        
+        ## Scope
+        - Section 1
+        - Section 2
+        - Section 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: writeup_type
+    attributes:
+      label: Writeup Type
+      description: What type of writeup is this?
+      options:
+        - CTF Challenge Solution
+        - Vulnerability Analysis
+        - Technique/Exploitation Guide
+        - Tool/Framework Tutorial
+        - Research Summary
+        - Incident Analysis
+        - Lab Walkthrough
+        - Best Practices Guide
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_outline
+    attributes:
+      label: Content Outline
+      description: Create an outline of the writeup sections
+      placeholder: |
+        # Title
+        
+        ## 1. Introduction
+        - Context
+        - Background
+        
+        ## 2. Main Content
+        - Concept 1
+        - Concept 2
+        - Concept 3
+        
+        ## 3. Practical Example
+        - Setup
+        - Step-by-step walkthrough
+        
+        ## 4. Tools & Resources
+        - Tools used
+        - References
+        
+        ## 5. Conclusion
+        - Key takeaways
+        - Recommendations
+    validations:
+      required: true
+
+  - type: input
+    id: target_audience
+    attributes:
+      label: Target Audience
+      description: Who is this writeup for? (e.g., beginners, intermediate, advanced)
+      placeholder: "Intermediate security practitioners"
+
+  - type: input
+    id: word_count
+    attributes:
+      label: Target Word Count
+      description: Approximately how long should this writeup be?
+      placeholder: "2000-3000 words"
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Target Completion Date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_issues
+    attributes:
+      label: Related Issues/Tasks
+      description: Link to related roadmap items, research, or tools
+      placeholder: |
+        - Related to: #1 (Milestone)
+        - Part of: #5 (Learning goal)

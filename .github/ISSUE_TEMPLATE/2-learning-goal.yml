@@ -1,0 +1,87 @@
+name: Learning Goal
+description: Create a learning or training objective for your security track
+title: "[Learning] Track Name - Topic"
+labels: ["type:learning", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a new learning or training objective for your security track.
+        This could be a skill to master, technology to learn, or concept to understand.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this learning goal for?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning_objective
+    attributes:
+      label: Learning Objective
+      description: What do you want to learn or master?
+      placeholder: |
+        ## What to Learn
+        
+        ## Why It Matters
+        
+        ## Success Criteria
+        How will you know you've mastered this?
+    validations:
+      required: true
+
+  - type: textarea
+    id: study_plan
+    attributes:
+      label: Study Plan
+      description: How will you learn this? (courses, books, labs, etc.)
+      placeholder: |
+        1. Read/watch: [Resource]
+        2. Practice: [Lab/Exercise]
+        3. Document: [Writeup]
+        4. Share: [Presentation/Writeup]
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: Recommended resources for this learning goal
+      placeholder: |
+        **Courses:**
+        - Course 1
+        
+        **Books:**
+        - Book 1
+        
+        **Labs:**
+        - Lab 1
+        
+        **Blogs/Documentation:**
+        - Reference 1
+
+  - type: input
+    id: target_date
+    attributes:
+      label: Target Completion Date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any other context or requirements

@@ -1,0 +1,48 @@
+name: Feature Request
+description: Suggest an improvement to the roadmap tracking system
+title: "[Feature] Brief description"
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest improvements or new features for the roadmap tracking system or process.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: What would you like to improve or add?
+      placeholder: |
+        ## Problem
+        What problem does this solve?
+        
+        ## Solution
+        How should it work?
+        
+        ## Benefits
+        Why would this help the team?
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Use Cases
+      description: How would the team use this feature?
+      placeholder: |
+        - Use case 1
+        - Use case 2
+        - Use case 3
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this is complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3

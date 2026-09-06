@@ -1,0 +1,136 @@
+name: CTF Challenge
+description: Create a task for solving a CTF challenge
+title: "[CTF] Challenge Name - Source"
+labels: ["type:ctf", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a task for solving a CTF challenge on platforms like HackTheBox, TryHackMe, etc.
+        Include the challenge details and track your progress.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this CTF challenge related to?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+        - Multi-track
+    validations:
+      required: true
+
+  - type: input
+    id: challenge_name
+    attributes:
+      label: Challenge Name
+      description: Full name of the CTF challenge
+      placeholder: "HackTheBox - Lame"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Where is the challenge from?
+      options:
+        - HackTheBox
+        - TryHackMe
+        - CyberDefenders
+        - PicoCTF
+        - CTFLearn
+        - OverTheWire
+        - DVWA
+        - WebGoat
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      description: Challenge difficulty (Easy, Medium, Hard, Extreme, etc.)
+      placeholder: "Medium"
+    validations:
+      required: true
+
+  - type: textarea
+    id: challenge_description
+    attributes:
+      label: Challenge Description
+      description: What is the challenge about? What are the objectives?
+      placeholder: |
+        ## Objective
+        
+        ## Description
+        
+        ## Key Skills
+        - Skill 1
+        - Skill 2
+        - Skill 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: challenge_link
+    attributes:
+      label: Challenge Link
+      description: URL to the challenge
+      placeholder: "https://www.hackthebox.com/machines/lame"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High (learning priority)
+        - Medium (good to do)
+        - Low (optional)
+    validations:
+      required: true
+
+  - type: textarea
+    id: progress_notes
+    attributes:
+      label: Progress Notes
+      description: Document your progress solving this challenge
+      placeholder: |
+        ## Initial Reconnaissance
+        - What you found
+        
+        ## Exploitation Steps
+        - Step 1
+        - Step 2
+        - Step 3
+        
+        ## Flags/Proof
+        - User flag: flag{...}
+        - Root flag: flag{...}
+        
+        ## Lessons Learned
+        - What you learned
+        - Techniques discovered
+    validations:
+      required: true
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Target Completion Date
+      placeholder: "YYYY-MM-DD"
+
+  - type: textarea
+    id: related_writeup
+    attributes:
+      label: Related Writeup
+      description: Link to writeup issue if you plan to document this challenge
+      placeholder: "Related to issue #X (Writeup)"

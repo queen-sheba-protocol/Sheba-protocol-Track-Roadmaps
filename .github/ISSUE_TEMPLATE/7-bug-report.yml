@@ -1,0 +1,44 @@
+name: Bug Report
+description: Report an issue with the roadmap tracking system or documentation
+title: "[Bug] Brief description"
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues with the roadmap tracking system, documentation, or process.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's the problem?
+      placeholder: |
+        ## What Happened
+        
+        ## Expected Behavior
+        
+        ## Steps to Reproduce
+        1. Step 1
+        2. Step 2
+        3. Step 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect the team?
+
+  - type: checkboxes
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - label: Critical (blocks work)
+        - label: High (major impact)
+        - label: Medium (some impact)
+        - label: Low (minor issue)

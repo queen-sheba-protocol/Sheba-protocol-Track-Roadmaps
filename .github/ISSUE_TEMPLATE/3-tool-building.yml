@@ -1,0 +1,121 @@
+name: Tool Building
+description: Create a task for building a tool, script, or automation
+title: "[Tool] Track Name - Tool Name"
+labels: ["type:tool-building", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a task for building a new tool, script, or automation for your security track.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this tool for?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+    validations:
+      required: true
+
+  - type: input
+    id: tool_name
+    attributes:
+      label: Tool Name
+      description: What is the tool called?
+      placeholder: "My Security Tool"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tool_description
+    attributes:
+      label: Tool Description
+      description: What does the tool do? Why do we need it?
+      placeholder: |
+        ## Purpose
+        
+        ## Problem It Solves
+        
+        ## Key Features
+        - Feature 1
+        - Feature 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Primary Language
+      description: What language will this be written in?
+      options:
+        - Python
+        - Bash/Shell
+        - Go
+        - Rust
+        - C/C++
+        - PowerShell
+        - JavaScript/TypeScript
+        - Java
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements & Specifications
+      description: What should the tool do? Include acceptance criteria.
+      placeholder: |
+        ## Functional Requirements
+        - Req 1
+        - Req 2
+        
+        ## Non-Functional Requirements
+        - Performance requirement
+        - Compatibility requirement
+        
+        ## Acceptance Criteria
+        - [ ] Feature 1 working
+        - [ ] Documentation complete
+        - [ ] Tests passing
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_plan
+    attributes:
+      label: Implementation Plan
+      description: How will you build this tool?
+      placeholder: |
+        1. Setup project structure
+        2. Implement core functionality
+        3. Add features
+        4. Write tests
+        5. Document
+        6. Release
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Target Completion Date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Any external tools, libraries, or resources needed
+      placeholder: |
+        - Library 1
+        - Library 2
+        - Other dependencies

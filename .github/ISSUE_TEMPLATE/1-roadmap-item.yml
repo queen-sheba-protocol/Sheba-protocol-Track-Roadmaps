@@ -1,0 +1,118 @@
+name: Roadmap Item
+description: Create a quarterly milestone or major roadmap item for a security track
+title: "[Roadmap] Track Name - Milestone Title"
+labels: ["type:roadmap-item", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a new quarterly milestone or major roadmap item for your security track.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this roadmap item for?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Milestone Description
+      description: What is the goal of this milestone? What problem does it solve?
+      placeholder: |
+        ## Goal
+        What we want to achieve
+        
+        ## Why
+        Why this milestone matters
+        
+        ## Success Criteria
+        How we measure success
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Expected Deliverables
+      description: What will be produced? (writeups, tools, lab completions, etc.)
+      placeholder: |
+        - [ ] Writeup: Topic
+        - [ ] Tool: Name
+        - [ ] Lab completion: X exercises
+        - [ ] Documentation: Guide
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Key Tasks
+      description: Break down the milestone into concrete tasks
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+        - [ ] Task 4
+        - [ ] Task 5
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Critical (blocker)
+        - High (important for quarter)
+        - Medium (good to have)
+        - Low (nice to have)
+    validations:
+      required: true
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Due Date
+      description: When should this milestone be completed?
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Learning Resources
+      description: Tools, labs, documentation, or references for this milestone
+      placeholder: |
+        **Tools:**
+        - Tool 1
+        - Tool 2
+        
+        **Labs:**
+        - Lab 1
+        
+        **References:**
+        - Reference 1
+
+  - type: checkboxes
+    id: labels_checklist
+    attributes:
+      label: Additional Labels
+      description: Select any additional labels to apply
+      options:
+        - label: "priority:critical"
+        - label: "priority:high"
+        - label: "priority:medium"
+        - label: "priority:low"

@@ -1,0 +1,101 @@
+name: Research Task
+description: Create a research or investigation task
+title: "[Research] Track Name - Topic"
+labels: ["type:research", "status:planning"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a new research or investigation task for your security track.
+        This could be vulnerability research, technique evaluation, or security analysis.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Security Track
+      description: Which track is this research for?
+      options:
+        - Web Security
+        - Active Directory
+        - Forensics
+        - Red Teaming
+        - Cloud Security
+        - Network Security
+    validations:
+      required: true
+
+  - type: textarea
+    id: research_question
+    attributes:
+      label: Research Question
+      description: What are you investigating? What question are you trying to answer?
+      placeholder: |
+        ## Research Question
+        
+        ## Hypothesis
+        
+        ## Why It Matters
+    validations:
+      required: true
+
+  - type: textarea
+    id: research_plan
+    attributes:
+      label: Research Plan
+      description: How will you conduct the research?
+      placeholder: |
+        1. Literature review: [sources]
+        2. Lab setup: [environment]
+        3. Experimentation: [tests/scenarios]
+        4. Analysis: [analysis approach]
+        5. Documentation: [writeup]
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Expected Deliverables
+      description: What will you produce from this research?
+      placeholder: |
+        - Research paper/writeup
+        - POC/working example
+        - Analysis findings
+        - Recommendations
+        - Tool/script
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Research Resources
+      description: Papers, blogs, tools, or other resources for this research
+      placeholder: |
+        **Papers:**
+        - Paper 1
+        
+        **Blogs/Articles:**
+        - Article 1
+        
+        **Tools:**
+        - Tool 1
+        
+        **Lab Resources:**
+        - Lab 1
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Target Completion Date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any constraints, assumptions, or other context
